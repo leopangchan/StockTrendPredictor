@@ -1,0 +1,56 @@
+h1 {
+	text-align: center;
+}
+
+form {
+	margin-top: 10px;
+}
+
+.qtxt {
+	text-align: right;
+}
+
+#chatbox {
+	border: 1px solid gray;
+	background-color: #FFFFF0;
+	height: 400px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+
+#scrollable {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 100%;
+}
+
+.cpost {
+	background-color: #1E90FF;
+	color: white;
+	padding: 10px;
+	border: 1px solid #1E90FF;
+	border-radius: 6px;
+	margin: 10px;
+	float: right;
+	clear: both;
+	max-width: 90%;
+}
+
+.bpost {
+	background-color: gray;
+	color: white;
+	padding: 10px;
+	border: 1px solid gray;
+	border-radius: 6px;
+	margin: 10px;
+	float:left;
+	clear:both;
+	max-width: 90%;
+}
+
+@media(max-width: 990px) {
+	.qbtn {
+		margin-top: 10px;
+	}
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <title>Financial Bot</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="homeController.js"></script>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <body ng-app="financeapp">
+    <div class="container-fluid" ng-controller="homeController">
+      <div class="page-header">
+        <h1>Financial Chat Bot</h1>
+      </div>
+      <div class="row center-block" style="width: 95%;">
+        <label>Chat Box:</label>
+        <div>
+          <form id="postsbmt" ng-submit="submitPost()" class="col-md-6">
+            <div class="form-group">
+              <div class="content row">
+                <div class="col-md-12" id="chatbox">
+                  <div id="scrollable">
+                    <div ng-repeat="post in posts" id={{post.id}}>
+                      <div ng-repeat="botpost in botPosts">
+                        <div class="cpost">
+                          {{post.text}}
+                        </div>
+                        <div class="bpost">
+                          {{botpost.data}}
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content row">
+                <div class="col-md-10">
+                  <input class="form-control qtxt" type="text"  name="chattext" placeholder="Type into the chat" ng-model="ctext">
+                </div>
+                <div class="col-md-2 qbtn">
+                  <button class="form-control btn btn-primary post">Post</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form ng-submit="" class="col-md-6">
+            <div class="form-group">
+              <div class="content row">
+                <div class="col-md-10">
+                  <input type="Query" name="query-search" placeholder="Search a company" class="form-control qtxt"></input>
+                </div>
+                <div class="col-md-2 qbtn">
+                  <button class="form-control btn btn-primary" type="submit">Submit</button>
+                </div>
+              </div>
+              <div class="content row">
+                <div class="query-results"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="ChatPage/chatPageController.js"></script>
+    <script src="stockDetail/stockDetailController.js"></script> -->
+  </body>
+</html>
